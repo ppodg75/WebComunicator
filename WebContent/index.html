@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Simple communicator</title>
+</head>
+
+<style type="text/css">
+
+.mineTitle {
+margin-top: 10; 
+margin-bottom: 2px;
+font-size: 12pt; 
+color: blue; 
+text-align: right;
+padding-right: 20px;
+}
+
+.mineBox { 
+margin-top: 10; 
+margin-bottom: 10px; 
+border: 2px solid blue; 
+font-size: 12pt; 
+color: blue; 
+background-color: yellow;
+border-radius: 5px;
+text-align: right;
+padding-right: 5px;
+}
+
+.otherTitle {
+text-align: left;
+margin-top: 10x; 
+margin-bottom: 22x;
+font-size: 12pt; 
+color: green; 
+padding-left: 20px;
+}
+
+.otherBox { 
+text-align: left;
+margin-top: 10; 
+margin-bottom: 10px; 
+border: 2px solid red; 
+font-size: 12pt; 
+color: green; 
+background-color: yellow;
+border-radius: 5px;
+padding-left: 5px; 
+ }
+ 
+.datetime { 
+text-align: left;
+margin-top: 5; 
+margin-bottom: 5px; 
+font-size: 8pt; 
+color: black; 
+font-style: italic
+}
+
+#output {
+ width: 50%;
+}
+
+</style>
+
+<body>
+    <h1>Communicator</h1>
+    <form name="comm">
+       Imie: <input type="text" placeholder="wpisz imie" id="username" name="username" /><br/>
+       Wiadomość: <input type="text" placeholder="wpisz tekst" id="message" name="message" />
+       <button type="button" onclick="sendMessage()">Send message</button>    
+    </form>    
+    <div id="output">
+    </div>    
+    <script type="text/javascript" src="websocket.js"></script>
+</body>
+</html>
